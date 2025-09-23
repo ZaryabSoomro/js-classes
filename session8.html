@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    th,
+    td {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <!-- OBJECT -->
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Position</th>
+            <th>Clubs</th>
+            <th>Points</th>
+        </tr>
+        <tr>
+            <td id="p1"></td>
+            <td id="c1"></td>
+            <td id="po1"></td>
+        </tr>
+        <tr>
+            <td id="p2"></td>
+            <td id="c2"></td>
+            <td id="po2"></td>
+        </tr>
+        <tr>
+            <td id="p3"></td>
+            <td id="c3"></td>
+            <td id="po3"></td>
+        </tr>
+        <tr>
+            <td id="p4"></td>
+            <td id="c4"></td>
+            <td id="po4"></td>
+        </tr>
+        <tr>
+            <td id="p5"></td>
+            <td id="c5"></td>
+            <td id="po5"></td>
+        </tr>
+        <tr>
+            <td id="p6"></td>
+            <td id="c6"></td>
+            <td id="po6"></td>
+        </tr>
+    </table>
+    <script>
+
+        let data = {
+
+            position: [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+            ],
+
+            clubs: [
+                "Liverpool",
+                "Tottenham",
+                "Arsenal",
+                "Crystal Palace",
+                "Bournemouth",
+                "chelsea",
+            ],
+
+            points: [
+                15,
+                10,
+                9,
+                9,
+                9,
+                8,
+            ],
+        }
+        document.getElementById("p1").innerHTML = data.position[0];
+        document.getElementById("p2").innerHTML = data.position[1];
+        document.getElementById("p3").innerHTML = data.position[2];
+        document.getElementById("p4").innerHTML = data.position[3];
+        document.getElementById("p5").innerHTML = data.position[4];
+        document.getElementById("p6").innerHTML = data.position[5];
+
+        document.getElementById("c1").innerHTML = data.clubs[0];
+        document.getElementById("c2").innerHTML = data.clubs[1];
+        document.getElementById("c3").innerHTML = data.clubs[2];
+        document.getElementById("c4").innerHTML = data.clubs[3];
+        document.getElementById("c5").innerHTML = data.clubs[4];
+        document.getElementById("c6").innerHTML = data.clubs[5];
+
+        document.getElementById("po1").innerHTML = data.points[0];
+        document.getElementById("po2").innerHTML = data.points[1];
+        document.getElementById("po3").innerHTML = data.points[2];
+        document.getElementById("po4").innerHTML = data.points[3];
+        document.getElementById("po5").innerHTML = data.points[4];
+        document.getElementById("po6").innerHTML = data.points[5];
+
+    </script>
+</body>
+
+</html>

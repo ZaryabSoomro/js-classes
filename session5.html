@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        margin: 30px;
+    }
+    .container{
+        position: absolute;
+        left: 33.33333%;
+    }
+    table{
+        text-align: center;
+    }
+</style>
+<body>
+    <!-- event and function -->
+    <button onclick="showmsg()">Show</button>
+    <button onclick="hidemsg()">Hide</button>
+
+    <h1 id="msg" onmouseenter="colorchange()" onmouseleave="colorback()"></h1>
+    <div class="container">
+        <table border="3">
+            <thead>
+            <tr>
+                <th>Product Id</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Weight</th>
+            </tr>
+            </thead>
+            <!-- <tr>
+                <td id="id"></td>
+                <td id="name"></td>
+                <td id="price"></td>
+                <td id="weight"></td>
+            </tr>-->
+            <tbody id="tablebody">
+
+            </tbody>
+        </table>
+        <button onclick="dataenter()">Enter Product Details</button>
+    </div>
+    <script>
+
+        function showmsg() {
+            let message = prompt("Write Your Message!");
+            document.getElementById("msg").innerHTML = message;
+        }
+        function colorchange() {
+            document.getElementById("msg").style.color = "red";
+            document.getElementById("msg").style.fontSize = "40px";
+        }
+        function colorback() {
+            document.getElementById("msg").style.color = "black";
+            document.getElementById("msg").style.fontSize = "32px";
+        }
+        function hidemsg() {
+            document.getElementById("msg").innerHTML = "";
+        }
+
+        // self study
+    
+        function dataenter() {
+            let id = prompt("Write Product Id No.");
+            let name = prompt("Write product Name");
+            let price = prompt("Price Of The Product");
+            let weight = prompt("Weight Of The Product");
+
+            // document.getElementById("id").innerHTML = id;
+            // document.getElementById("name").innerHTML = name;
+            // document.getElementById("price").innerHTML = price;
+            // document.getElementById("weight").innerHTML = weight;
+
+            let tablebody = document.getElementById("tablebody");
+
+           let row = document.createElement("tr");
+
+            row.innerHTML=`
+                <td>${id}</td>
+                <td>${name}</td>
+                <td>${price}</td>
+                <td>${weight}</td>
+            `
+            tablebody.appendChild(row);
+        }
+    </script>
+</body>
+
+</html>

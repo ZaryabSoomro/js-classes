@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+
+    #background{
+        height: 100vh;
+        background: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("data:image/jpeg;base64,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");
+    }    
+    #formbox {
+        border: 2px solid black;
+        border-radius: 40px;
+        width: 400px;
+    }
+
+    a {
+        text-decoration: none;
+        color: purple;
+    }
+
+    span {
+        text-decoration: none;
+        font-size: small;
+    }
+
+    .btn {
+        text-align: center;
+        border-radius: 100px;
+        width: 90%;
+    }
+    
+</style>
+
+<body>
+    <!-- FORM VALIDATION -->
+    <div class="container-fluid bg-primary py-4">
+        <h1 class="text-center">FORM VALIDATION</h1>
+    </div>
+    <div class="container-fluid" id="background">
+    <div class="container">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 p-5 mt-5" id="formbox">
+                <form onsubmit="return formValidations() ">
+                    <h2 class="text-center">Login Form</h2><br>
+                    <input type="text" class="form-control" placeholder="UserName" id="user"><br>
+                    <input type="text" class="form-control" placeholder="Password" id="pass">
+                    <div id="user"></div>
+                    <div class="row">
+                        <div class="col-6">
+                            <input type="checkbox">
+                            <span>Remember Me</span>
+                        </div>
+                        <div class="col-6 text-end"><a href="">
+                                <span>Forgot Password?</span>
+                            </a></div>
+                    </div><br>
+                    <div class="text-center">
+                        <button class="btn btn-lg btn-outline-primary">Login</button>
+                    </div><br>
+                    <div class="text-center">
+                        <p>Don't have an account?<a href="">Register</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+    </div>
+    <script>
+        function formValidations(){
+            let username = document.getElementById("user").value;
+            let Password = document.getElementById("pass").value;
+
+            if(username=="zaryab" && Password==123){
+                document.getElementById("user").style.border="3px solid green";
+                document.getElementById("pass").style.border="3px solid green";
+                return false
+            }else{
+                document.getElementById("pass").style.border="3px solid red";
+                document.getElementById("user").style.border="3px solid red";
+                return false
+            }
+        }
+    </script>
+</body>
+
+</html>
