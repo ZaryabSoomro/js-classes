@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<style>
+    .fa {
+        position: absolute;
+        left: 163px;
+        top: 10px;
+    }
+</style>
+
+<body>
+    <form action="">
+        <i class="fa fa-eye-slash" id="eye"></i>
+        <input type="password" id="password">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        let pass = document.getElementById("password");
+        let eye = document.getElementById("eye");
+
+        eye.addEventListener("click", function () {
+            if (pass.type === "password") {
+                pass.type = "text";
+                eye.classList.remove("fa-eye-slash");
+                eye.classList.add("fa-eye");
+            } else {
+                pass.type = "password";
+                eye.classList.remove("fa-eye");
+                eye.classList.add("fa-eye-slash");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
